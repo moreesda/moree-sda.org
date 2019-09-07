@@ -2,7 +2,7 @@ html, body {
 margin: 0;
 border: 0;
 padding: 0;
-font-family: "Open Sans";
+font-family: "Open Sans", "Helvetica", sans;
 font-size: 2vmin;
 background-color: #C8C8C8;
 color: #434244;
