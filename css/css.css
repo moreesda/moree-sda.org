@@ -90,6 +90,12 @@ background-color: #C8C8C8;
 font-size: 80%;
 }
 
+.alert {
+background: #FFE931;
+border: solid #FFE931 1px;
+margin: 0;
+}
+
 div.table {
 display: table;
 border-collapse: separate;
