@@ -183,6 +183,10 @@ height: 80vh;
 width: 100%;
 }
 
+.blogdate {
+font-style: italic;
+font-size: 90%;
+}
 /* Video embeds */
 .video-container {
 position:relative;
