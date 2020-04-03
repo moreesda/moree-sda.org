@@ -2,7 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>Moree SDA Church’s Blog</title>
 <id>https://moree-sda.org/blog/atom.xml</id>
-<updated>2020-04-02T17:33:14.893483</updated>
+<updated>2020-04-03T20:21:34.406845</updated>
+<entry>
+<link href="https://moree-sda.org//blog/2020/0402.html" />
+<title>Happy Sabbath</title>
+<summary>Here’s a sermon to watch this Sabbath</summary>
+<updated>2020-04-03T20:21:17.454908</updated>
+</entry>
 <entry>
 <link href="https://moree-sda.org//blog/2020/0402.html" />
 <title>Welcome to the blog</title>
