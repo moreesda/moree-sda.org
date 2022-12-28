@@ -1,0 +1,48 @@
+input {
+    display: none;
+}
+
+label {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    color: #eeeeee;
+    font-weight: bold;
+    background-color: #ff8200;
+    margin: 0.5vmin 0 0.5vmin 0;
+    border: solid #B85E00 0.2em;
+    border-radius: 0.4em;
+    padding: 2vmin;
+    font-size: 2vmin;
+    text-align: center;
+}
+
+input:hover + label, input:checked + label {
+    background-color: #D83602;
+}
+
+form {
+    display: table;
+    margin: auto;
+}
+
+#from, #to, #transpose {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#from, #to {
+    width: 20vmin;
+}
+
+#from p, #to p {
+    font-weight: bold;
+}
+
+#transpose-numeric, #transpose-keyboard {
+    width: 50vmin;
+    font-size: 700%;
+    margin: 0;
+    padding: 0;
+}

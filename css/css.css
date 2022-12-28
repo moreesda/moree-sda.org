@@ -213,7 +213,7 @@ height:100%;
 }
 
 /* For the contact form */
-form * {
+#contactform * {
 margin: 0;
 }
 input, textarea {
