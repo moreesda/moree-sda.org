@@ -6,15 +6,20 @@ label {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    color: #eeeeee;
+    color: black;
     font-weight: bold;
     background-color: #ff8200;
     margin: 0.5vmin 0 0.5vmin 0;
-    border: solid #B85E00 0.2em;
-    border-radius: 0.4em;
-    padding: 2vmin;
-    font-size: 2vmin;
-    text-align: center;
+    border: solid #B85E00 0.4vmin;
+    border-radius: 0.8vmin;
+    padding: 0.5vmin 2vmin;
+    font-size: 3.5vmin;
+    text-align: left;
+}
+
+label img {
+    height: 5vmin;
+    vertical-align: middle;
 }
 
 input:hover + label, input:checked + label {
@@ -26,14 +31,20 @@ form {
     margin: auto;
 }
 
-#from, #to, #transpose {
+#from, #to {
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#transpose {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
 
 #from, #to {
-    width: 20vmin;
+    width: 30vmin;
 }
 
 #from p, #to p {
@@ -41,8 +52,8 @@ form {
 }
 
 #transpose-numeric, #transpose-keyboard {
-    width: 50vmin;
-    font-size: 700%;
+    width: 40vmin;
+    font-size: 15vmin;
     margin: 0;
     padding: 0;
 }

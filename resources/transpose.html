@@ -56,36 +56,36 @@
 <h1>Transposing tool</h1>
 
 
-<link rel="stylesheet" href="transpose.css" />
+<link rel="stylesheet" href="transpose/transpose.css" />
 </style>
-<script src="transpose.js" type="text/javascript"></script>
+<script src="transpose/transpose.js" type="text/javascript"></script>
 <form>
     <div id="from">
         <p>From key</p>
-        <input id="from_a"  type="radio" name="from-key" onclick="calc();" value="9" />
-        <label for="from_a">A</label>
-        <input id="from_as"  type="radio" name="from-key" onclick="calc();" value="10" />
-        <label for="from_as">A♯/B♭</label>
-        <input id="from_b"  type="radio" name="from-key" onclick="calc();" value="11" />
-        <label for="from_b">B</label>
-        <input id="from_c"  type="radio" name="from-key" onclick="calc();" value="0" checked="true" />
-        <label for="from_c">C</label>
-        <input id="from_cs"  type="radio" name="from-key" onclick="calc();" value="1" />
-        <label for="from_cs">C♯/D♭</label>
-        <input id="from_d"  type="radio" name="from-key" onclick="calc();" value="2" />
-        <label for="from_d">D</label>
-        <input id="from_ds"  type="radio" name="from-key" onclick="calc();" value="3" />
-        <label for="from_ds">D♯/E♭</label>
-        <input id="from_e"  type="radio" name="from-key" onclick="calc();" value="4" />
-        <label for="from_e">E</label>
-        <input id="from_f"  type="radio" name="from-key" onclick="calc();" value="5" />
-        <label for="from_f">F</label>
-        <input id="from_fs"  type="radio" name="from-key" onclick="calc();" value="6" />
-        <label for="from_fs">F♯/G♭</label>
-        <input id="from_g"  type="radio" name="from-key" onclick="calc();" value="7" />
-        <label for="from_g">G</label>
-        <input id="from_gs"  type="radio" name="from-key" onclick="calc();" value="8" />
-        <label for="from_gs">G♯/A♭</label>
+        <input id="from_a" type="radio" name="from-key" onclick="calc();" value="9" />
+        <label for="from_a"><img src="transpose/A.svg" />&emsp;A</label>
+        <input id="from_as" type="radio" name="from-key" onclick="calc();" value="10" />
+        <label for="from_as"><img src="transpose/Bflat.svg" />&emsp;A♯/B♭</label>
+        <input id="from_b" type="radio" name="from-key" onclick="calc();" value="11" />
+        <label for="from_b"><img src="transpose/B.svg" />&emsp;B</label>
+        <input id="from_c" type="radio" name="from-key" onclick="calc();" value="0" checked="true" />
+        <label for="from_c"><img src="transpose/C.svg" />&emsp;C</label>
+        <input id="from_cs" type="radio" name="from-key" onclick="calc();" value="1" />
+        <label for="from_cs"><img src="transpose/Dflat.svg" />&emsp;C♯/D♭</label>
+        <input id="from_d" type="radio" name="from-key" onclick="calc();" value="2" />
+        <label for="from_d"><img src="transpose/D.svg" />&emsp;D</label>
+        <input id="from_ds" type="radio" name="from-key" onclick="calc();" value="3" />
+        <label for="from_ds"><img src="transpose/Eflat.svg" />&emsp;D♯/E♭</label>
+        <input id="from_e" type="radio" name="from-key" onclick="calc();" value="4" />
+        <label for="from_e"><img src="transpose/E.svg" />&emsp;E</label>
+        <input id="from_f" type="radio" name="from-key" onclick="calc();" value="5" />
+        <label for="from_f"><img src="transpose/F.svg" />&emsp;F</label>
+        <input id="from_fs" type="radio" name="from-key" onclick="calc();" value="6" />
+        <label for="from_fs"><img src="transpose/Gflat.svg" />&emsp;F♯/G♭</label>
+        <input id="from_g" type="radio" name="from-key" onclick="calc();" value="7" />
+        <label for="from_g"><img src="transpose/G.svg" />&emsp;G</label>
+        <input id="from_gs" type="radio" name="from-key" onclick="calc();" value="8" />
+        <label for="from_gs"><img src="transpose/Aflat.svg" />&emsp;G♯/A♭</label>
     </div>
 
     <div id="transpose">
@@ -97,30 +97,30 @@
 
     <div id="to">
         <p>To key</p>
-        <input id="to_a"  type="radio" name="to-key" onclick="calc();" value="9" />
-        <label for="to_a">A</label>
-        <input id="to_as"  type="radio" name="to-key" onclick="calc();" value="10" />
-        <label for="to_as">A♯/B♭</label>
-        <input id="to_b"  type="radio" name="to-key" onclick="calc();" value="11" />
-        <label for="to_b">B</label>
-        <input id="to_c"  type="radio" name="to-key" onclick="calc();" value="0" checked="true" />
-        <label for="to_c">C</label>
-        <input id="to_cs"  type="radio" name="to-key" onclick="calc();" value="1" />
-        <label for="to_cs">C♯/D♭</label>
-        <input id="to_d"  type="radio" name="to-key" onclick="calc();" value="2" />
-        <label for="to_d">D</label>
-        <input id="to_ds"  type="radio" name="to-key" onclick="calc();" value="3" />
-        <label for="to_ds">D♯/E♭</label>
-        <input id="to_e"  type="radio" name="to-key" onclick="calc();" value="4" />
-        <label for="to_e">E</label>
-        <input id="to_f"  type="radio" name="to-key" onclick="calc();" value="5" />
-        <label for="to_f">F</label>
-        <input id="to_fs"  type="radio" name="to-key" onclick="calc();" value="6" />
-        <label for="to_fs">F♯/G♭</label>
-        <input id="to_g"  type="radio" name="to-key" onclick="calc();" value="7" />
-        <label for="to_g">G</label>
-        <input id="to_gs"  type="radio" name="to-key" onclick="calc();" value="8" />
-        <label for="to_gs">G♯/A♭</label>
+        <input id="to_a" type="radio" name="to-key" onclick="calc();" value="9" />
+        <label for="to_a"><img src="transpose/A.svg" />&emsp;A</label>
+        <input id="to_as" type="radio" name="to-key" onclick="calc();" value="10" />
+        <label for="to_as"><img src="transpose/Bflat.svg" />&emsp;A♯/B♭</label>
+        <input id="to_b" type="radio" name="to-key" onclick="calc();" value="11" />
+        <label for="to_b"><img src="transpose/B.svg" />&emsp;B</label>
+        <input id="to_c" type="radio" name="to-key" onclick="calc();" value="0" checked="true" />
+        <label for="to_c"><img src="transpose/C.svg" />&emsp;C</label>
+        <input id="to_cs" type="radio" name="to-key" onclick="calc();" value="1" />
+        <label for="to_cs"><img src="transpose/Dflat.svg" />&emsp;C♯/D♭</label>
+        <input id="to_d" type="radio" name="to-key" onclick="calc();" value="2" />
+        <label for="to_d"><img src="transpose/D.svg" />&emsp;D</label>
+        <input id="to_ds" type="radio" name="to-key" onclick="calc();" value="3" />
+        <label for="to_ds"><img src="transpose/Eflat.svg" />&emsp;D♯/E♭</label>
+        <input id="to_e" type="radio" name="to-key" onclick="calc();" value="4" />
+        <label for="to_e"><img src="transpose/E.svg" />&emsp;E</label>
+        <input id="to_f" type="radio" name="to-key" onclick="calc();" value="5" />
+        <label for="to_f"><img src="transpose/F.svg" />&emsp;F</label>
+        <input id="to_fs" type="radio" name="to-key" onclick="calc();" value="6" />
+        <label for="to_fs"><img src="transpose/Gflat.svg" />&emsp;F♯/G♭</label>
+        <input id="to_g" type="radio" name="to-key" onclick="calc();" value="7" />
+        <label for="to_g"><img src="transpose/G.svg" />&emsp;G</label>
+        <input id="to_gs" type="radio" name="to-key" onclick="calc();" value="8" />
+        <label for="to_gs"><img src="transpose/Aflat.svg" />&emsp;G♯/A♭</label>
     </div>
 </form>
 
