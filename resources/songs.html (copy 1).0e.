@@ -1,0 +1,89 @@
+#!/usr/bin/python
+
+import subprocess, re
+
+Replacements(
+    title = """Songs prepared with guitar chords""",
+    description = """These songs are on the church computer.  They have been marked up with guitar chords for the musicians to use, so they are a great choice.""",
+    )
+
+def get_songs(directory):
+    command = ['grep', '-lr', '@stage', directory]
+    grep_out = subprocess.run(
+        command,
+        text=True,
+        capture_output=True
+        ).stdout
+    # Get the songs into a list of names instead of full paths
+    songs = grep_out.splitlines()
+    songs.sort()
+    songs_return = []
+    key_re = re.compile(r'^\s*__key__\s*(.*)\s*')
+    hymnary_re = re.compile(r'^%\s*#\s*hymnary\s*(.*)\s*')
+    video_re = re.compile(r'^%\s*#\s*video\s*(.*)\s*')
+
+    for s in songs:
+        # Get the song name from the file name
+        songname = s.replace(directory, '').replace('.revp', '')
+        hymnary = None
+        video = None
+        # Read in the file and grep it
+        with open(s, 'r') as f:
+            lines = f.read().splitlines()
+            for l in lines:
+                match = key_re.match(l)
+                if match is not None:
+                    key = match.groups()[0]
+                    break
+            for l in lines:
+                match = hymnary_re.match(l)
+                if match is not None:
+                    hymnary = match.groups()[0]
+                    break
+            for l in lines:
+                match = video_re.match(l)
+                if match is not None:
+                    video = match.groups()[0]
+                    break
+        markdown = "{} [{}]".format(songname, key)
+        if (hymnary is not None) or (video is not None):
+            markdown += "\n"
+        if hymnary is not None:
+            markdown += "\n* [hymnary entry]({}){{target=_blank}}".format(hymnary)
+        if video is not None:
+            markdown += "\n* [video]({}){{target=_blank}}".format(video)
+        markdown += "\n"
+        songs_return.append(markdown)
+    return songs_return
+
+sda_hymnal = get_songs("/home/ja/Revelation/presentations/SDA Hymnal/")
+other_songs = get_songs("/home/ja/Revelation/presentations/Songs/")
+
+WebPage(Markdown("""
+# Songs prepared with guitar chords
+
+These songs are on the church computer.  They have been marked up with guitar chords for the musicians to use, so they are a great choice.
+"""),
+HtmlDiv( # table
+HtmlDiv( # row
+HtmlDiv( # cell
+Markdown("""
+## SDA Hymnal
+
+{}
+""".format('\n'.join(sda_hymnal))),
+htmlclass="cell"),
+HtmlDiv( # cell
+Markdown("""
+## Other songs
+
+{}
+""".format('\n'.join(other_songs))),
+htmlclass="cell"),
+htmlclass="row"),
+htmlclass="table"),
+
+Markdown("""
+Updated {now}
+""")
+)
