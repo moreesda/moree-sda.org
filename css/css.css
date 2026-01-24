@@ -103,27 +103,32 @@ font-size: 80%;
 }
 
 div.table {
-display: table;
-border-collapse: separate;
 width: 94%; /* 100% - 3% padding on each side */
 }
 
 div.row {
-display: table-row;
+/*display: table-row;*/
+display: flex;
+justify-content: space-between;
+gap: 1em;
 }
 
 div.cell {
-display: table-cell;
+/*display: table-cell;
 padding: 0 1em 0 1em;
 margin: 0;
+width: 50%;*/
 width: 50%;
+min-width: 20em;
 }
+/*
 div.cell:first-of-type {
 padding-left: 0;
 }
 div.cell:last-of-type {
 padding-right: 0;
 }
+*/
 div.cell > * {
 /* Compensate for margin collapsing that doesn't occur with the div */
 margin-top: 0;
